@@ -5,23 +5,23 @@
 class Kubesealplus < Formula
   desc "A kubeseal wrapper which makes working with Sealed Secrets and Helm a breeze."
   homepage "https://github.com/ryan0x44/kubesealplus"
-  version "0.3.1"
+  version "0.4.0"
   license "MIT"
 
   depends_on "kubeseal"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ryan0x44/kubesealplus/releases/download/v0.3.1/kubesealplus_Darwin_arm64.tar.gz"
-      sha256 "bab4092bd44877ce714547aa4258893477f242acb53a4fb65323d62174dd7051"
+      url "https://github.com/ryan0x44/kubesealplus/releases/download/v0.4.0/kubesealplus_Darwin_arm64.tar.gz"
+      sha256 "aa421ab0c73c38c24938bebdcdb5a19fae8a51123e39efc20763b69f2b98b16b"
 
       def install
         bin.install "kubesealplus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ryan0x44/kubesealplus/releases/download/v0.3.1/kubesealplus_Darwin_x86_64.tar.gz"
-      sha256 "00e83634e29870b14bc73f34b93426ce48a23b90ac0db991d8a30ba216b84e25"
+      url "https://github.com/ryan0x44/kubesealplus/releases/download/v0.4.0/kubesealplus_Darwin_x86_64.tar.gz"
+      sha256 "3990218e26696fb400d124386653b515ccce00bec6095f404aa32ce3ba67f4b4"
 
       def install
         bin.install "kubesealplus"
@@ -31,16 +31,16 @@ class Kubesealplus < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ryan0x44/kubesealplus/releases/download/v0.3.1/kubesealplus_Linux_arm64.tar.gz"
-      sha256 "162e13bcea65a2480093d1b00d3987e97a02d9afa2164cbe1b323399ef8c0061"
+      url "https://github.com/ryan0x44/kubesealplus/releases/download/v0.4.0/kubesealplus_Linux_arm64.tar.gz"
+      sha256 "9c102b76035ff2f0fa577de50282c2f5c1a12e1cd2e6ffa2470538c46fae9310"
 
       def install
         bin.install "kubesealplus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ryan0x44/kubesealplus/releases/download/v0.3.1/kubesealplus_Linux_x86_64.tar.gz"
-      sha256 "9d5760e71a9f1d4e7f50b6db6d8c1a6faaaab5aa84738226784d45bf5a389670"
+      url "https://github.com/ryan0x44/kubesealplus/releases/download/v0.4.0/kubesealplus_Linux_x86_64.tar.gz"
+      sha256 "3b6e9e76d952f7a13186af5766464cc5d57892a57268c69a178ed5d46f3ab98a"
 
       def install
         bin.install "kubesealplus"
